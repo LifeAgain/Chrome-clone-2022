@@ -3,6 +3,7 @@ const login = document.querySelector(".login");
 const loginForm = document.querySelector("#login-form");
 const clockArea = document.querySelector(".clock");
 const quoteArea = document.querySelector(".quotes");
+const icons = document.querySelector(".icons");
 
 function randomBg() {
   const bg = [
@@ -65,6 +66,7 @@ function getQuotes() {
 
 function loginDisplay(profile, id) {
   loginForm.style.display = "none";
+  icons.style.display = "block";
   login.append(document.createElement("p"));
   login.append(document.createElement("h1"));
   login.querySelector("p").innerHTML = "<img src='img/"+profile+"' alt='profileImg'>";
@@ -99,6 +101,7 @@ const profileImg = localStorage.getItem("profileImg");
 
 if (userId === null) {
   loginForm.style.display = "block";
+  icons.style.display = "none";
   loginForm.addEventListener("submit", submitEvent);
 } else loginDisplay(profileImg, userId); // login
 
