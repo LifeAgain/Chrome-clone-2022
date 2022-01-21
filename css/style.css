@@ -1,0 +1,57 @@
+@import url(reset.css);
+.clearfix::after { content: ''; display: block; clear: both; }
+
+body { overflow: hidden; }
+
+@keyframes fadeEffect { from { opacity: 0; }
+  to { opacity: 1; } }
+
+#container { height: 100vh; animation-name: fadeEffect; animation-duration: .5s; }
+
+.quotes, .clock, .icons { position: fixed; }
+
+.quotes { width: 40%; top: 0; right: 0; padding: 10px; text-align: right; background-color: rgba(255, 255, 255, 0.6); border-bottom-left-radius: 10px; font-size: 20px; margin-bottom: 50px; }
+
+.quotes span { display: block; margin-top: 10px; padding-top: 5px; border-top: 3px solid #000; }
+
+.login { position: fixed; margin: 0 auto; top: 30%; left: 0; right: 0; text-align: center; }
+
+.login #login-form { background-color: rgba(255, 255, 255, 0.6); width: 30%; padding: 30px; margin: 0 auto; border-radius: 5px; }
+
+.login #login-form #username, .login #login-form #password { display: block; width: 100%; height: 30px; margin: 0 auto 20px auto; background: none; border: none; border-bottom: 1px solid #fff; }
+
+.login #login-form #login { border: none; background-color: #000; color: #fff; border-radius: 5px; font-size: 18px; padding: 5px 10px; }
+
+.login img { width: 20%; height: 20%; border-radius: 50%; }
+
+.login h1 { display: inline-block; text-align: center; width: 15%; background-color: rgba(255, 255, 255, 0.6); font-weight: bold; font-size: 23px; margin-top: 10px; padding: 10px; border-radius: 5px; }
+
+.clock { bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.6); padding: 20px; font-size: 40px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
+
+.clock span { font-size: 25px; }
+
+.icons { bottom: 0; right: 0; background-color: rgba(255, 255, 255, 0.6); border-top-left-radius: 5px; border-bottom-left-radius: 5px; padding-right: 10px; }
+
+.icons li { float: left; padding: 10px; padding-right: 0; }
+
+.icons li i { cursor: pointer; font-size: 30px; }
+
+.icons li .toDoList, .icons li .weather { display: none; position: absolute; width: 300px; height: 200px; background-color: rgba(255, 255, 255, 0.6); bottom: 53px; border-radius: 5px; right: 0; overflow: hidden; }
+
+.icons li:first-child:hover .toDoList { display: block; }
+
+.icons li:first-child:hover .toDoList #toDo-form { margin-top: 20px; text-align: center; }
+
+.icons li:first-child:hover .toDoList #toDo-form #todoSubmit { border: none; background-color: #000; color: #fff; border-radius: 5px; padding-top: 2px; padding-bottom: 2px; }
+
+.icons li:first-child:hover .toDoList ul { padding-left: 25px; margin-top: 15px; }
+
+.icons li:first-child:hover .toDoList li { font-size: 14px; margin-right: 10px; }
+
+.icons li:first-child:hover .toDoList li button { margin-left: 5px; font-size: 10px !important; background-color: #000; color: #fff; border: none; border-radius: 10px; vertical-align: 0; }
+
+.icons li:last-child:hover .weather { display: block; text-align: center; }
+
+.icons li:last-child:hover .weather h2 { font-size: 20px; font-weight: bold; padding: 20px 0; background-color: #000; color: #fff; }
+
+.icons li:last-child:hover .weather .temp, .icons li:last-child:hover .weather .weatherSub, .icons li:last-child:hover .weather .city { display: block; font-weight: bold; margin-top: 20px; }
